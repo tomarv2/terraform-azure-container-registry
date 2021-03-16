@@ -91,10 +91,7 @@ tf -cloud azure destroy -var "subscription_id=<>" -var "client_id=<>" -var "clie
 module "acr" {
   source = "../"
 
-  deploy_acr      = true
-
   rg_name         = "test-rg"
-  email           = "demo@demo.com"
   # DOCKER BUILD
   deploy_image      = true
   
@@ -111,10 +108,7 @@ module "acr" {
 module "acr" {
   source = "../"
 
-  deploy_acr      = true
-  
   rg_name         = "test-rg"
-  email           = "demo@demo.com"
   # DOCKER BUILD
   deploy_image      = true
   
@@ -170,7 +164,6 @@ Please refer to examples directory [link](examples) for references.
 | deploy\_image | feature flag, true or false | `bool` | `true` | no |
 | docker\_image\_tag | This is the tag which will be used for the image that you created | `string` | `"latest"` | no |
 | dockerfile\_folder | This is the folder which contains the Dockerfile | `string` | n/a | yes |
-| email | email address to be used for tagging (suggestion: use group email address) | `any` | n/a | yes |
 | georeplication\_locations | A list of Azure locations where the container registry should be geo-replicated. | `list(string)` | <pre>[<br>  "East US",<br>  "West Europe"<br>]</pre> | no |
 | image\_name | n/a | `any` | `null` | no |
 | prjid | (Required) Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `any` | n/a | yes |
