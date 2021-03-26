@@ -60,17 +60,17 @@ export ARM_ACCESS_KEY=xxxxxxxxxx # Output of remote_state.sh
 
 - Run and verify the output before deploying:
 ```
-tf -cloud azure plan -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -cloud azure plan  -var='teamid=foo' -var='prjid=bar' -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
 ```
 
 - Run below to deploy:
 ```
-tf -cloud azure apply -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -cloud azure apply  -var='teamid=foo' -var='prjid=bar' -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
 ```
 
 - Run below to destroy:
 ```
-tf -cloud azure destroy -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
+tf -cloud azure destroy  -var='teamid=foo' -var='prjid=bar' -var "subscription_id=<>" -var "client_id=<>" -var "client_secret=<>" -var "tenant_id=<>"
 ```
 
 > ❗️ **Important** - Two variables are required for using `tf` package:
@@ -86,7 +86,7 @@ tf -cloud azure destroy -var "subscription_id=<>" -var "client_id=<>" -var "clie
 >
 > For more information refer to [Terraform documentation](https://www.terraform.io/docs/language/values/variables.html)
 
-##### ACR
+#### ACR
 ```
 module "acr" {
   source = "../"
@@ -94,7 +94,6 @@ module "acr" {
   rg_name         = "test-rg"
   # DOCKER BUILD
   deploy_image      = true
-  
   dockerfile_folder = "scripts"
   #-----------------------------------------------
   # Note: Do not change teamid and prjid once set.
@@ -103,7 +102,7 @@ module "acr" {
 }
 ```
 
-##### ACR with Push webhook
+#### ACR with Push webhook
 ```
 module "acr" {
   source = "../"
@@ -111,7 +110,6 @@ module "acr" {
   rg_name         = "test-rg"
   # DOCKER BUILD
   deploy_image      = true
-  
   dockerfile_folder = "scripts"
   # WEBHOOK
   webhooks = [
