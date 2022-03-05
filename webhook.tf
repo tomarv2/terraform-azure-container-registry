@@ -19,4 +19,3 @@ resource "azurerm_container_registry_webhook" "webhooks" {
   #   "Content-Type" = "application/json"
   # }
 }
-
