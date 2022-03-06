@@ -19,6 +19,7 @@ az acr login --name "${REGISTRY}"
 echo "Running ${IMAGE_NAME} from ${BUILD_FOLDER}/Dockerfile"
 
 echo "Build image"
+echo build -t "${REGISTRY}".azurecr.io/"${IMAGE_NAME}"/"${TAG}" "${BUILD_FOLDER}"
 docker build -t "${REGISTRY}".azurecr.io/"${IMAGE_NAME}"/"${TAG}" "${BUILD_FOLDER}"
 
 echo "Push image (latest and random generated)"

@@ -7,7 +7,7 @@ data "external" "build_folder" {
   program = ["sh", "${path.module}/scripts/folder_contents.sh", var.dockerfile_folder]
 }
 
-# Push to aws_ecr_repository
+# Push to registry
 resource "null_resource" "build_and_push" {
   count = var.deploy_image ? 1 : 0
 
