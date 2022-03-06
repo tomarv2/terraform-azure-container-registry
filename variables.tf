@@ -33,6 +33,7 @@ variable "deploy_image" {
 }
 
 variable "dockerfile_folder" {
+
   description = "This is the folder which contains the Dockerfile"
   type        = string
 }
