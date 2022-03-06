@@ -11,13 +11,13 @@ provider "azurerm" {
   features {}
 }
 module "acr" {
-  source = "../"
+  source = "../../"
 
   resource_group_name = "demo-resource_group"
   # DOCKER BUILD
   deploy_image = true
-  # Path to script directory relative to current location
-  dockerfile_folder = "../scripts"
+  # Path to scripts directory relative to current location
+  dockerfile_folder = "../../scripts"
   location          = var.location
   # WEBHOOK
   webhooks = [
