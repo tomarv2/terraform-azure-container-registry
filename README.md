@@ -11,8 +11,6 @@
         <img src="https://img.shields.io/stackexchange/stackoverflow/r/6679867"></a>
     <a href="https://twitter.com/intent/follow?screen_name=varuntomar2019" alt="follow on Twitter">
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
-    <a href="https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest" alt="follow on Twitter">
-        <img src="https://img.shields.io/badge/Terraform-registry-blue"></a>
 </p>
 
 ## Terraform module for [Azure Container Registry](https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest)
