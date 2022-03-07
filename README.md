@@ -11,29 +11,27 @@
         <img src="https://img.shields.io/stackexchange/stackoverflow/r/6679867"></a>
     <a href="https://twitter.com/intent/follow?screen_name=varuntomar2019" alt="follow on Twitter">
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
-    <a href="https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest" alt="Terraform registry">
+    <a href="https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest" alt="follow on Twitter">
         <img src="https://img.shields.io/badge/Terraform-registry-blue"></a>
 </p>
 
-# Terraform module to create [Azure Container Registry](https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest)
-
-####
-
-> :arrow_right:  Terraform module for [Google Container Registry](https://registry.terraform.io/modules/tomarv2/container-registry/google/latest)
+## Terraform module for [Azure Container Registry](https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest)
 
 > :arrow_right:  Terraform module for [AWS Container Registry](https://registry.terraform.io/modules/tomarv2/ecr/aws/latest)
 
-## Versions
+> :arrow_right:  Coming up Terraform module for [Google Artifact Registry](https://cloud.google.com/artifact-registry/docs/quickstarts)
+
+### Versions
 
 - Module tested for Terraform 1.0.1.
-- Azure provider version [2.98.0](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- Azure provider version [2.98](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
 - `main` branch: Provider versions not pinned to keep up with Terraform releases
 - `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-container-registry/tags" alt="GitHub tag">
         <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-container-registry" /></a> in your releases)
 
-## Usage
+### Usage
 
-### Option 1:
+#### Option 1:
 
 ```
 terrafrom init
@@ -43,7 +41,7 @@ terraform destroy -var='teamid=tryme' -var='prjid=project'
 ```
 **Note:** With this option please take care of remote state storage
 
-### Option 2:
+#### Option 2:
 
 #### Recommended method (stores remote state in storage using `prjid` and `teamid` to create directory structure):
 
@@ -80,10 +78,7 @@ tf -c=azure apply -var='teamid=foo' -var='prjid=bar'
 ```
 tf -c=azure destroy -var='teamid=foo' -var='prjid=bar'
 ```
-**NOTE:**
-
-- Read more on [tfremote](https://github.com/tomarv2/tfremote)
----
+**Note:** Read more on [tfremote](https://github.com/tomarv2/tfremote)
 #### ACR
 ```
 terraform {
