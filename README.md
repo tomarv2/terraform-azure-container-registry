@@ -152,6 +152,14 @@ module "acr" {
 
 Please refer to examples directory [link](examples) for references.
 
+### References
+- https://docs.microsoft.com/en-us/azure/container-registry/container-registry-webhook
+- https://github.com/onnimonni/terraform-ecr-docker-build-module
+
+### Note
+Ensure there are executable permissions on `scripts/build.sh`
+
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -166,8 +174,8 @@ Please refer to examples directory [link](examples) for references.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 2.50.0 |
-| <a name="provider_external"></a> [external](#provider\_external) | 2.1.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 2.98 |
+| <a name="provider_external"></a> [external](#provider\_external) | 2.2.0 |
 | <a name="provider_null"></a> [null](#provider\_null) | 3.1.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.1.0 |
 
@@ -220,10 +228,4 @@ No modules.
 | <a name="output_registry_password"></a> [registry\_password](#output\_registry\_password) | The Password associated with the Container Registry Admin account - if the admin account is enabled |
 | <a name="output_registry_url"></a> [registry\_url](#output\_registry\_url) | The URL that can be used to log into the container registry |
 | <a name="output_registry_username"></a> [registry\_username](#output\_registry\_username) | The Username associated with the Container Registry Admin account - if the admin account is enabled |
-
-### References
-- https://docs.microsoft.com/en-us/azure/container-registry/container-registry-webhook
-- https://github.com/onnimonni/terraform-ecr-docker-build-module
-
-### Note
-Ensure there are executable permissions on `scripts/build.sh`
+<!-- END_TF_DOCS -->
