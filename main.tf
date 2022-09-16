@@ -7,7 +7,7 @@ resource "azurerm_container_registry" "registry" {
   count = var.deploy_acr ? 1 : 0
 
   name                = lower(local.acr_name)
-  resource_group_name = var.resource_group_name
+  resource_group_name = var.resource_group
   location            = var.location
   sku                 = var.sku
   admin_enabled       = var.admin_enabled
