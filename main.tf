@@ -65,6 +65,5 @@ resource "azurerm_container_registry" "registry" {
       }
     }
   }
-
   tags = merge(local.shared_tags, var.extra_tags)
 }
