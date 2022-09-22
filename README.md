@@ -22,7 +22,7 @@
 ### Versions
 
 - Module tested for Terraform 1.0.1.
-- Azure provider version [2.98](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
+- Azure provider version [3.21.1](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
 - `main` branch: Provider versions not pinned to keep up with Terraform releases
 - `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-container-registry/tags" alt="GitHub tag">
         <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-container-registry" /></a> in your releases)
@@ -165,7 +165,7 @@ Ensure there are executable permissions on `scripts/build.sh`
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 2.98 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.21.1 |
 | <a name="requirement_external"></a> [external](#requirement\_external) | 2.2.0 |
 | <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | 3.1.0 |
@@ -174,7 +174,7 @@ Ensure there are executable permissions on `scripts/build.sh`
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 2.98 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.21.1 |
 | <a name="provider_external"></a> [external](#provider\_external) | 2.2.0 |
 | <a name="provider_null"></a> [null](#provider\_null) | 3.1.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.1.0 |
@@ -213,7 +213,7 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | Azure region to use | `string` | n/a | yes |
 | <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_registry_name"></a> [registry\_name](#input\_registry\_name) | Registry name | `string` | `null` | no |
-| <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group | `string` | n/a | yes |
+| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | Name of the resource group | `string` | n/a | yes |
 | <a name="input_sku"></a> [sku](#input\_sku) | The SKU name of the container registry. Possible values are Basic, Standard and Premium. Classic (which was previously Basic) is supported only for existing resources | `string` | `"Standard"` | no |
 | <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
 | <a name="input_trust_policy_enabled"></a> [trust\_policy\_enabled](#input\_trust\_policy\_enabled) | Specifies whether the trust policy is enabled (Premium only). | `bool` | `false` | no |
