@@ -9,8 +9,8 @@
         <img src="https://img.shields.io/github/commit-activity/m/tomarv2/terraform-azure-container-registry" /></a>
     <a href="https://stackoverflow.com/users/6679867/tomarv2" alt="Stack Exchange reputation">
         <img src="https://img.shields.io/stackexchange/stackoverflow/r/6679867"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=varuntomar2019" alt="follow on Twitter">
-        <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=tomar_v2" alt="follow on Twitter">
+        <img src="https://img.shields.io/twitter/follow/tomar_v2?style=social&logo=twitter"></a>
 </p>
 
 ## Terraform module for [Azure Container Registry](https://registry.terraform.io/modules/tomarv2/container-registry/azure/latest)
@@ -162,22 +162,11 @@ Ensure there are executable permissions on `scripts/build.sh`
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.21.1 |
-| <a name="requirement_external"></a> [external](#requirement\_external) | 2.2.0 |
-| <a name="requirement_null"></a> [null](#requirement\_null) | 3.1.0 |
-| <a name="requirement_random"></a> [random](#requirement\_random) | 3.1.0 |
+No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.21.1 |
-| <a name="provider_external"></a> [external](#provider\_external) | 2.2.0 |
-| <a name="provider_null"></a> [null](#provider\_null) | 3.1.0 |
-| <a name="provider_random"></a> [random](#provider\_random) | 3.1.0 |
+No providers.
 
 ## Modules
 
@@ -185,47 +174,13 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [azurerm_container_registry.registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
-| [azurerm_container_registry_webhook.webhooks](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry_webhook) | resource |
-| [null_resource.build_and_push](https://registry.terraform.io/providers/hashicorp/null/3.1.0/docs/resources/resource) | resource |
-| [random_string.naming](https://registry.terraform.io/providers/hashicorp/random/3.1.0/docs/resources/string) | resource |
-| [external_external.build_folder](https://registry.terraform.io/providers/hashicorp/external/2.2.0/docs/data-sources/external) | data source |
+No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_admin_enabled"></a> [admin\_enabled](#input\_admin\_enabled) | Specifies whether the admin user is enabled | `bool` | `false` | no |
-| <a name="input_allowed_cidrs"></a> [allowed\_cidrs](#input\_allowed\_cidrs) | List of CIDRs to allow on the registry | `list(string)` | `[]` | no |
-| <a name="input_allowed_subnets"></a> [allowed\_subnets](#input\_allowed\_subnets) | List of VNet/Subnet IDs to allow on the registry | `list(string)` | `[]` | no |
-| <a name="input_azure_services_bypass_allowed"></a> [azure\_services\_bypass\_allowed](#input\_azure\_services\_bypass\_allowed) | Whether to allow trusted Azure services to access a network restricted Container Registry | `bool` | `false` | no |
-| <a name="input_deploy_acr"></a> [deploy\_acr](#input\_deploy\_acr) | Feature flag, true or false | `bool` | `true` | no |
-| <a name="input_deploy_image"></a> [deploy\_image](#input\_deploy\_image) | Feature flag, true or false | `bool` | `true` | no |
-| <a name="input_docker_image_tag"></a> [docker\_image\_tag](#input\_docker\_image\_tag) | This is the tag which will be used for the image that you created | `string` | `"latest"` | no |
-| <a name="input_dockerfile_folder"></a> [dockerfile\_folder](#input\_dockerfile\_folder) | This is the folder which contains the Dockerfile | `string` | n/a | yes |
-| <a name="input_extra_tags"></a> [extra\_tags](#input\_extra\_tags) | Additional tags to associate | `map(string)` | `{}` | no |
-| <a name="input_georeplication"></a> [georeplication](#input\_georeplication) | A list of Azure locations where the container registry should be geo-replicated. Only activated on Premium SKU.<br>  Supported properties are:<br>    location                = string<br>    zone\_redundancy\_enabled = bool<br>    tags                    = map(string)<br>  or this can be a list of `string` (each element is a location) | `list(any)` | `[]` | no |
-| <a name="input_image_name"></a> [image\_name](#input\_image\_name) | Image name | `string` | `null` | no |
-| <a name="input_images_retention_days"></a> [images\_retention\_days](#input\_images\_retention\_days) | Specifies the number of images retention days. | `number` | `90` | no |
-| <a name="input_images_retention_enabled"></a> [images\_retention\_enabled](#input\_images\_retention\_enabled) | Specifies whether images retention is enabled (Premium only). | `bool` | `false` | no |
-| <a name="input_location"></a> [location](#input\_location) | Azure region to use | `string` | n/a | yes |
-| <a name="input_prjid"></a> [prjid](#input\_prjid) | Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply' | `string` | n/a | yes |
-| <a name="input_registry_name"></a> [registry\_name](#input\_registry\_name) | Registry name | `string` | `null` | no |
-| <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | Name of the resource group | `string` | n/a | yes |
-| <a name="input_sku"></a> [sku](#input\_sku) | The SKU name of the container registry. Possible values are Basic, Standard and Premium. Classic (which was previously Basic) is supported only for existing resources | `string` | `"Standard"` | no |
-| <a name="input_teamid"></a> [teamid](#input\_teamid) | Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply' | `string` | n/a | yes |
-| <a name="input_trust_policy_enabled"></a> [trust\_policy\_enabled](#input\_trust\_policy\_enabled) | Specifies whether the trust policy is enabled (Premium only). | `bool` | `false` | no |
-| <a name="input_webhooks"></a> [webhooks](#input\_webhooks) | A list of objects describing the webhooks resources required | <pre>list(object({<br>    name           = string<br>    service_uri    = string<br>    status         = string<br>    scope          = string<br>    actions        = list(string)<br>    custom_headers = map(string)<br>  }))</pre> | `[]` | no |
+No inputs.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_registry_configure"></a> [registry\_configure](#output\_registry\_configure) | Registry configure |
-| <a name="output_registry_id"></a> [registry\_id](#output\_registry\_id) | The Container Registry ID |
-| <a name="output_registry_password"></a> [registry\_password](#output\_registry\_password) | The Password associated with the Container Registry Admin account - if the admin account is enabled |
-| <a name="output_registry_url"></a> [registry\_url](#output\_registry\_url) | The URL that can be used to log into the container registry |
-| <a name="output_registry_username"></a> [registry\_username](#output\_registry\_username) | The Username associated with the Container Registry Admin account - if the admin account is enabled |
+No outputs.
 <!-- END_TF_DOCS -->
